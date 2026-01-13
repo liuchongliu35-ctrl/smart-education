@@ -91,7 +91,7 @@
 **教学设计编辑板**
 ![Editor](assert/备课板.png)
 
-**辅助工具支持长文本关键词提取**
+**辅助工具支持长文本关键词提取** 
 **AI辅助工具1--文本AI续写功能**
 ![Editor](assert/Ai工具4.png)
 **AI辅助工具2--AI图片生成**
@@ -120,10 +120,9 @@
 ![Micro Class](assert/微课制作4.png)
 ![Micro Class](assert/微课制作5.png)
 
-### 🎥 数字人微课生成演示
+### 🎥 数字人微课片段演示
 点击下方视频直接播放：
-![Sample Video](assert/联邦学习技术微课视频（完整版）.mp4)
-
+[![Watch the video](https://i1.hdslb.com/bfs/archive/e665c0590c31782b6ba44d6292d436b30ccbc374.jpg@672w_378h_1c.avif )](https://www.bilibili.com/video/BV16UrzB7Ey1/?spm_id_from=333.1387.upload.video_card.click)
 
 ### 6. 学情分析与班级管控
 *基于 ECharts 的多维度数据可视化分析。*
