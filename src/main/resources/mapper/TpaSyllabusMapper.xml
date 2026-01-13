@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bing.tpa.mapper.TpaSyllabusMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.bing.tpa.domain.entity.TpaSyllabus">
+        <id column="syllabus_id" property="syllabusId" />
+        <result column="td_id" property="tdId" />
+        <result column="author_id" property="authorId" />
+        <result column="is_open" property="isOpen" />
+        <result column="content" property="content" />
+        <result column="type" property="type" />
+        <result column="create_time" property="createTime" />
+        <result column="is_delete" property="isDelete" />
+        <result column="update_time" property="updateTime" />
+        <result column="is_update" property="isUpdate" />
+        <result column="name" property="name"/>
+        <result column="secondary_title" property="secondaryTitle"/>
+        <result column="top_title" property="topTitle"/>
+    </resultMap>
+
+</mapper>
+

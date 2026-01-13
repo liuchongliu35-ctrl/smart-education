@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bing.tpa.mapper.TopicTemplateRelationMapper">
+
+    <select id="findByPointIds" resultType="com.bing.tpa.domain.entity.TopicTemplateRelation">
+<!--        SELECT *-->
+<!--        FROM topic_template_relations-->
+<!--        <where>-->
+<!--            <if test="pointIds != null and pointIds.size() > 0">-->
+<!--                (-->
+<!--                parent_template_id IN-->
+<!--                <foreach item="id" collection="pointIds" open="(" separator="," close=")">-->
+<!--                    #{id}-->
+<!--                </foreach>-->
+<!--                OR child_template_id IN-->
+<!--                <foreach item="id" collection="pointIds" open="(" separator="," close=")">-->
+<!--                    #{id}-->
+<!--                </foreach>-->
+<!--                )-->
+<!--            </if>-->
+<!--            <if test="pointIds == null or pointIds.size() == 0">-->
+<!--                1 = 0-->
+<!--            </if>-->
+<!--        </where>-->
+        SELECT * FROM topic_template_relations
+        WHERE parent_template_id IN
+        <foreach item="id" collection="pointIds" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+        OR child_template_id IN
+        <foreach item="id" collection="pointIds" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </select>
+    <select id="getAllTemplateRelations" resultType="com.bing.tpa.domain.entity.TopicTemplateRelation">
+        SELECT *
+        FROM topic_template_relations
+    </select>
+
+</mapper>

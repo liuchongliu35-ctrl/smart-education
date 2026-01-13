@@ -1,0 +1,761 @@
+{
+  "nodes": [
+    {
+      "id": 1057,
+      "source": "custom",
+      "topTitle": "第七讲 人工智能前沿技术",
+      "secondaryTitle": null,
+      "content": "掌握人工智能领域最新技术发展趋势与应用前景",
+      "level": 2,
+      "schoolId": 4,
+      "tsId": 11,
+      "templateId": null,
+      "children": [],
+      "parents": []
+    },
+    {
+      "id": 1058,
+      "source": "template",
+      "topTitle": "人工智能通识课",
+      "secondaryTitle": "理论教学内容",
+      "content": "人工智能通识课程知识体系",
+      "level": 1,
+      "schoolId": 4,
+      "tsId": 11,
+      "templateId": 1,
+      "children": [
+        {
+          "id": 1067,
+          "source": "template",
+          "topTitle": "第六讲人工智能安全与伦理",
+          "secondaryTitle": null,
+          "content": "能分析AI技术伦理与安全的典型问题；能提出应对AI失效风险的可行性建议。",
+          "level": 2,
+          "schoolId": 4,
+          "tsId": 11,
+          "templateId": 7,
+          "children": [
+            {
+              "id": 1087,
+              "source": "template",
+              "topTitle": "法律与治理",
+              "secondaryTitle": "第六讲",
+              "content": "AI监管框架；全球政策对比（欧盟AI法案/中国治理规范/美国标准）",
+              "level": 3,
+              "schoolId": 4,
+              "tsId": 11,
+              "templateId": 27,
+              "children": null,
+              "parents": []
+            }
+          ],
+          "parents": []
+        }
+      ],
+      "parents": []
+    },
+    {
+      "id": 1059,
+      "source": "custom",
+      "topTitle": "强化学习基础",
+      "secondaryTitle": "第七讲",
+      "content": "马尔可夫决策过程、Q学习、策略梯度等强化学习核心技术",
+      "level": 3,
+      "schoolId": 4,
+      "tsId": 11,
+      "templateId": null,
+      "children": null,
+      "parents": []
+    },
+    {
+      "id": 1060,
+      "source": "template",
+      "topTitle": "第一讲认识人工智能",
+      "secondaryTitle": null,
+      "content": "能阐述人工智能的核心概念与技术分类；能分析人工智能发展的关键里程碑与社会驱动力。",
+      "level": 2,
+      "schoolId": 4,
+      "tsId": 11,
+      "templateId": 2,
+      "children": [
+        {
+          "id": 1070,
+          "source": "template",
+          "topTitle": "人工智能主要流派",
+          "secondaryTitle": "第一讲",
+          "content": "符号主义、连接主义、行为主义学派的核心理论与代表人物",
+          "level": 3,
+          "schoolId": 4,
+          "tsId": 11,
+          "templateId": 10,
+          "children": null,
+          "parents": []
+        }
+      ],
+      "parents": []
+    },
+    {
+      "id": 1061,
+      "source": "custom",
+      "topTitle": "联邦学习技术",
+      "secondaryTitle": "第七讲",
+      "content": "分布式机器学习框架、隐私保护与模型聚合方法",
+      "level": 3,
+      "schoolId": 4,
+      "tsId": 11,
+      "templateId": null,
+      "children": null,
+      "parents": []
+    },
+    {
+      "id": 1062,
+      "source": "template",
+      "topTitle": "第二讲人工智能基础理论",
+      "secondaryTitle": null,
+      "content": "能运用语言逻辑等表示方法来表达简单知识；能使用基础搜索算法解决问题；能使用群智能算法完成对复杂问题的优化。",
+      "level": 2,
+      "schoolId": 4,
+      "tsId": 11,
+      "templateId": 3,
+      "children": [
+        {
+          "id": 1071,
+          "source": "template",
+          "topTitle": "知识表示方法",
+          "secondaryTitle": "第二讲",
+          "content": "谓词逻辑、产生式表示、框架理论、语义网等知识表示技术",
+          "level": 3,
+          "schoolId": 4,
+          "tsId": 11,
+          "templateId": 11,
+          "children": null,
+          "parents": []
+        }
+      ],
+      "parents": []
+    },
+    {
+      "id": 1064,
+      "source": "template",
+      "topTitle": "第三讲人工智能与计算思维",
+      "secondaryTitle": null,
+      "content": "掌握人工智能基本概念；学习基本计算思维方法。",
+      "level": 2,
+      "schoolId": 4,
+      "tsId": 11,
+      "templateId": 4,
+      "children": [
+        {
+          "id": 1076,
+          "source": "template",
+          "topTitle": "计算思维方法基础",
+          "secondaryTitle": "第三讲",
+          "content": "问题分解、模式识别、抽象化、算法设计等核心计算思维",
+          "level": 3,
+          "schoolId": 4,
+          "tsId": 11,
+          "templateId": 16,
+          "children": null,
+          "parents": []
+        }
+      ],
+      "parents": []
+    },
+    {
+      "id": 1065,
+      "source": "template",
+      "topTitle": "第四讲深度学习与大数据",
+      "secondaryTitle": null,
+      "content": "能绘制神经网络基础结构图（感知机制、反向传播、激活函数）；掌握深度学习模型的调试策略和技巧。",
+      "level": 2,
+      "schoolId": 4,
+      "tsId": 11,
+      "templateId": 5,
+      "children": [
+        {
+          "id": 1079,
+          "source": "template",
+          "topTitle": "大模型原理",
+          "secondaryTitle": "第四讲",
+          "content": "Transformer架构核心机制；预训练与微调技术；注意力机制",
+          "level": 3,
+          "schoolId": 4,
+          "tsId": 11,
+          "templateId": 19,
+          "children": null,
+          "parents": []
+        }
+      ],
+      "parents": []
+    },
+    {
+      "id": 1066,
+      "source": "template",
+      "topTitle": "第五讲人工智能的经典及前沿应用",
+      "secondaryTitle": null,
+      "content": "学会专家系统工具及应用；掌握计算机视觉模型和关键技术；学会自然语言处理基本方法；能描述生成式AI的核心原理；能理解\"AI+垂直领域\"创新应用原理。",
+      "level": 2,
+      "schoolId": 4,
+      "tsId": 11,
+      "templateId": 6,
+      "children": [
+        {
+          "id": 1084,
+          "source": "template",
+          "topTitle": "具身智能",
+          "secondaryTitle": "第五讲",
+          "content": "机器人感知与行动协同；环境交互与自适应学习",
+          "level": 3,
+          "schoolId": 4,
+          "tsId": 11,
+          "templateId": 24,
+          "children": null,
+          "parents": []
+        }
+      ],
+      "parents": []
+    },
+    {
+      "id": 1067,
+      "source": "template",
+      "topTitle": "第六讲人工智能安全与伦理",
+      "secondaryTitle": null,
+      "content": "能分析AI技术伦理与安全的典型问题；能提出应对AI失效风险的可行性建议。",
+      "level": 2,
+      "schoolId": 4,
+      "tsId": 11,
+      "templateId": 7,
+      "children": [
+        {
+          "id": 1087,
+          "source": "template",
+          "topTitle": "法律与治理",
+          "secondaryTitle": "第六讲",
+          "content": "AI监管框架；全球政策对比（欧盟AI法案/中国治理规范/美国标准）",
+          "level": 3,
+          "schoolId": 4,
+          "tsId": 11,
+          "templateId": 27,
+          "children": null,
+          "parents": []
+        }
+      ],
+      "parents": []
+    },
+    {
+      "id": 1068,
+      "source": "template",
+      "topTitle": "人工智能的定义与技术分类（修正）",
+      "secondaryTitle": "第一讲",
+      "content": "人工智能基本概念、技术分类体系（基于规则/统计/连接主义等）",
+      "level": 3,
+      "schoolId": 4,
+      "tsId": 11,
+      "templateId": 8,
+      "children": null,
+      "parents": []
+    },
+    {
+      "id": 1069,
+      "source": "template",
+      "topTitle": "人工智能发展简史",
+      "secondaryTitle": "第一讲",
+      "content": "从图灵测试到深度学习革命的关键发展历程",
+      "level": 3,
+      "schoolId": 4,
+      "tsId": 11,
+      "templateId": 9,
+      "children": null,
+      "parents": []
+    },
+    {
+      "id": 1070,
+      "source": "template",
+      "topTitle": "人工智能主要流派",
+      "secondaryTitle": "第一讲",
+      "content": "符号主义、连接主义、行为主义学派的核心理论与代表人物",
+      "level": 3,
+      "schoolId": 4,
+      "tsId": 11,
+      "templateId": 10,
+      "children": null,
+      "parents": []
+    },
+    {
+      "id": 1071,
+      "source": "template",
+      "topTitle": "知识表示方法",
+      "secondaryTitle": "第二讲",
+      "content": "谓词逻辑、产生式表示、框架理论、语义网等知识表示技术",
+      "level": 3,
+      "schoolId": 4,
+      "tsId": 11,
+      "templateId": 11,
+      "children": null,
+      "parents": []
+    },
+    {
+      "id": 1072,
+      "source": "template",
+      "topTitle": "搜索技术",
+      "secondaryTitle": "第二讲",
+      "content": "图搜索策略；盲目搜索（DFS/BFS）；启发式搜索（A*）；博弈搜索（Minimax）",
+      "level": 3,
+      "schoolId": 4,
+      "tsId": 11,
+      "templateId": 12,
+      "children": null,
+      "parents": []
+    },
+    {
+      "id": 1073,
+      "source": "template",
+      "topTitle": "群智能算法",
+      "secondaryTitle": "第二讲",
+      "content": "遗传算法；粒子群优化算法；蚁群算法的原理与应用",
+      "level": 3,
+      "schoolId": 4,
+      "tsId": 11,
+      "templateId": 13,
+      "children": null,
+      "parents": []
+    },
+    {
+      "id": 1074,
+      "source": "template",
+      "topTitle": "人工智能的数学本质",
+      "secondaryTitle": "第三讲",
+      "content": "AI背后的数学原理：概率论、线性代数、优化理论",
+      "level": 3,
+      "schoolId": 4,
+      "tsId": 11,
+      "templateId": 14,
+      "children": null,
+      "parents": []
+    },
+    {
+      "id": 1075,
+      "source": "template",
+      "topTitle": "人工智能中的简化数学",
+      "secondaryTitle": "第三讲",
+      "content": "面向AI应用的数学简化方法与计算优化",
+      "level": 3,
+      "schoolId": 4,
+      "tsId": 11,
+      "templateId": 15,
+      "children": null,
+      "parents": []
+    },
+    {
+      "id": 1076,
+      "source": "template",
+      "topTitle": "计算思维方法基础",
+      "secondaryTitle": "第三讲",
+      "content": "问题分解、模式识别、抽象化、算法设计等核心计算思维",
+      "level": 3,
+      "schoolId": 4,
+      "tsId": 11,
+      "templateId": 16,
+      "children": null,
+      "parents": []
+    },
+    {
+      "id": 1077,
+      "source": "template",
+      "topTitle": "神经网络基础",
+      "secondaryTitle": "第四讲",
+      "content": "感知机、反向传播算法、激活函数（Sigmoid, ReLU, Tanh）",
+      "level": 3,
+      "schoolId": 4,
+      "tsId": 11,
+      "templateId": 17,
+      "children": null,
+      "parents": []
+    },
+    {
+      "id": 1078,
+      "source": "template",
+      "topTitle": "典型深度神经网络",
+      "secondaryTitle": "第四讲",
+      "content": "卷积神经网络（CNN）、循环神经网络（RNN/LSTM）架构与应用",
+      "level": 3,
+      "schoolId": 4,
+      "tsId": 11,
+      "templateId": 18,
+      "children": null,
+      "parents": []
+    },
+    {
+      "id": 1079,
+      "source": "template",
+      "topTitle": "大模型原理",
+      "secondaryTitle": "第四讲",
+      "content": "Transformer架构核心机制；预训练与微调技术；注意力机制",
+      "level": 3,
+      "schoolId": 4,
+      "tsId": 11,
+      "templateId": 19,
+      "children": null,
+      "parents": []
+    },
+    {
+      "id": 1080,
+      "source": "template",
+      "topTitle": "专家系统应用",
+      "secondaryTitle": "第五讲",
+      "content": "医学诊断、农业专家系统等领域的规则引擎与知识库构建",
+      "level": 3,
+      "schoolId": 4,
+      "tsId": 11,
+      "templateId": 20,
+      "children": null,
+      "parents": []
+    },
+    {
+      "id": 1081,
+      "source": "template",
+      "topTitle": "计算机视觉技术",
+      "secondaryTitle": "第五讲",
+      "content": "目标检测（YOLO/SSD）、图像分割（Mask R-CNN）等CV核心技术",
+      "level": 3,
+      "schoolId": 4,
+      "tsId": 11,
+      "templateId": 21,
+      "children": null,
+      "parents": []
+    },
+    {
+      "id": 1082,
+      "source": "template",
+      "topTitle": "自然语言系统",
+      "secondaryTitle": "第五讲",
+      "content": "机器翻译、情感分析等NLP任务的技术实现",
+      "level": 3,
+      "schoolId": 4,
+      "tsId": 11,
+      "templateId": 22,
+      "children": null,
+      "parents": []
+    },
+    {
+      "id": 1083,
+      "source": "template",
+      "topTitle": "生成式AI",
+      "secondaryTitle": "第五讲",
+      "content": "生成对抗网络（GAN）、扩散模型等生成式技术原理",
+      "level": 3,
+      "schoolId": 4,
+      "tsId": 11,
+      "templateId": 23,
+      "children": null,
+      "parents": []
+    },
+    {
+      "id": 1084,
+      "source": "template",
+      "topTitle": "具身智能",
+      "secondaryTitle": "第五讲",
+      "content": "机器人感知与行动协同；环境交互与自适应学习",
+      "level": 3,
+      "schoolId": 4,
+      "tsId": 11,
+      "templateId": 24,
+      "children": null,
+      "parents": []
+    },
+    {
+      "id": 1085,
+      "source": "template",
+      "topTitle": "人工智能伦理",
+      "secondaryTitle": "第六讲",
+      "content": "数据偏见、算法歧视等伦理问题的分析与应对",
+      "level": 3,
+      "schoolId": 4,
+      "tsId": 11,
+      "templateId": 25,
+      "children": null,
+      "parents": []
+    },
+    {
+      "id": 1086,
+      "source": "template",
+      "topTitle": "技术风险",
+      "secondaryTitle": "第六讲",
+      "content": "失业危机、深度伪造、安全漏洞等社会技术风险",
+      "level": 3,
+      "schoolId": 4,
+      "tsId": 11,
+      "templateId": 26,
+      "children": null,
+      "parents": []
+    },
+    {
+      "id": 1087,
+      "source": "template",
+      "topTitle": "法律与治理",
+      "secondaryTitle": "第六讲",
+      "content": "AI监管框架；全球政策对比（欧盟AI法案/中国治理规范/美国标准）",
+      "level": 3,
+      "schoolId": 4,
+      "tsId": 11,
+      "templateId": 27,
+      "children": null,
+      "parents": []
+    },
+    {
+      "id": 1088,
+      "source": "custom",
+      "topTitle": "AI在医疗影像诊断的应用",
+      "secondaryTitle": "第五讲",
+      "content": "深度学习在CT/MRI影像分析中的实践案例",
+      "level": 3,
+      "schoolId": 4,
+      "tsId": 11,
+      "templateId": -1,
+      "children": null,
+      "parents": []
+    }
+  ],
+  "links": [
+    {
+      "source": 1071,
+      "target": 1080,
+      "relationId": 755,
+      "relationDesc": "知识表示是专家系统的基础"
+    },
+    {
+      "source": 1072,
+      "target": 1076,
+      "relationId": 756,
+      "relationDesc": "搜索算法是计算思维的应用"
+    },
+    {
+      "source": 1073,
+      "target": 1084,
+      "relationId": 757,
+      "relationDesc": "群智能算法可用于多机器人协同"
+    },
+    {
+      "source": 1077,
+      "target": 1081,
+      "relationId": 758,
+      "relationDesc": "神经网络是计算机视觉的核心技术"
+    },
+    {
+      "source": 1078,
+      "target": 1082,
+      "relationId": 759,
+      "relationDesc": "RNN/LSTM是自然语言处理的基础模型"
+    },
+    {
+      "source": 1079,
+      "target": 1083,
+      "relationId": 760,
+      "relationDesc": "Transformer是生成式AI的核心架构"
+    },
+    {
+      "source": 1074,
+      "target": 1077,
+      "relationId": 761,
+      "relationDesc": "数学理论是神经网络的基础"
+    },
+    {
+      "source": 1083,
+      "target": 1085,
+      "relationId": 762,
+      "relationDesc": "生成式AI引发数据偏见问题"
+    },
+    {
+      "source": 1084,
+      "target": 1086,
+      "relationId": 763,
+      "relationDesc": "具身智能可能带来失业风险"
+    },
+    {
+      "source": 1081,
+      "target": 1087,
+      "relationId": 764,
+      "relationDesc": "计算机视觉技术涉及隐私法律问题"
+    },
+    {
+      "source": 1058,
+      "target": 1057,
+      "relationId": 765,
+      "relationDesc": "课程-章节关系"
+    },
+    {
+      "source": 1058,
+      "target": 1060,
+      "relationId": 766,
+      "relationDesc": "课程-章节关系"
+    },
+    {
+      "source": 1058,
+      "target": 1062,
+      "relationId": 767,
+      "relationDesc": "课程-章节关系"
+    },
+    {
+      "source": 1058,
+      "target": 1064,
+      "relationId": 768,
+      "relationDesc": "课程-章节关系"
+    },
+    {
+      "source": 1058,
+      "target": 1065,
+      "relationId": 769,
+      "relationDesc": "课程-章节关系"
+    },
+    {
+      "source": 1058,
+      "target": 1066,
+      "relationId": 770,
+      "relationDesc": "课程-章节关系"
+    },
+    {
+      "source": 1058,
+      "target": 1067,
+      "relationId": 771,
+      "relationDesc": "课程-章节关系"
+    },
+    {
+      "source": 1057,
+      "target": 1059,
+      "relationId": 772,
+      "relationDesc": "知识点细分"
+    },
+    {
+      "source": 1057,
+      "target": 1061,
+      "relationId": 773,
+      "relationDesc": "知识点细分"
+    },
+    {
+      "source": 1067,
+      "target": 1085,
+      "relationId": 775,
+      "relationDesc": "知识点细分"
+    },
+    {
+      "source": 1067,
+      "target": 1086,
+      "relationId": 776,
+      "relationDesc": "知识点细分"
+    },
+    {
+      "source": 1067,
+      "target": 1087,
+      "relationId": 777,
+      "relationDesc": "知识点细分"
+    },
+    {
+      "source": 1066,
+      "target": 1088,
+      "relationId": 778,
+      "relationDesc": "知识点细分"
+    },
+    {
+      "source": 1066,
+      "target": 1080,
+      "relationId": 779,
+      "relationDesc": "知识点细分"
+    },
+    {
+      "source": 1066,
+      "target": 1081,
+      "relationId": 780,
+      "relationDesc": "知识点细分"
+    },
+    {
+      "source": 1066,
+      "target": 1082,
+      "relationId": 781,
+      "relationDesc": "知识点细分"
+    },
+    {
+      "source": 1066,
+      "target": 1083,
+      "relationId": 782,
+      "relationDesc": "知识点细分"
+    },
+    {
+      "source": 1066,
+      "target": 1084,
+      "relationId": 783,
+      "relationDesc": "知识点细分"
+    },
+    {
+      "source": 1065,
+      "target": 1077,
+      "relationId": 784,
+      "relationDesc": "知识点细分"
+    },
+    {
+      "source": 1065,
+      "target": 1078,
+      "relationId": 785,
+      "relationDesc": "知识点细分"
+    },
+    {
+      "source": 1065,
+      "target": 1079,
+      "relationId": 786,
+      "relationDesc": "知识点细分"
+    },
+    {
+      "source": 1064,
+      "target": 1074,
+      "relationId": 787,
+      "relationDesc": "知识点细分"
+    },
+    {
+      "source": 1064,
+      "target": 1075,
+      "relationId": 788,
+      "relationDesc": "知识点细分"
+    },
+    {
+      "source": 1064,
+      "target": 1076,
+      "relationId": 789,
+      "relationDesc": "知识点细分"
+    },
+    {
+      "source": 1062,
+      "target": 1072,
+      "relationId": 790,
+      "relationDesc": "知识点细分"
+    },
+    {
+      "source": 1062,
+      "target": 1073,
+      "relationId": 791,
+      "relationDesc": "知识点细分"
+    },
+    {
+      "source": 1062,
+      "target": 1071,
+      "relationId": 792,
+      "relationDesc": "知识点细分"
+    },
+    {
+      "source": 1060,
+      "target": 1068,
+      "relationId": 793,
+      "relationDesc": "知识点细分"
+    },
+    {
+      "source": 1060,
+      "target": 1069,
+      "relationId": 794,
+      "relationDesc": "知识点细分"
+    },
+    {
+      "source": 1060,
+      "target": 1070,
+      "relationId": 795,
+      "relationDesc": "知识点细分"
+    }
+  ]
+}

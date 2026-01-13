@@ -1,0 +1,263 @@
+ /* src/pages/PPT/pptPage.module.css */
+ .container {
+     padding: 24px;
+     min-height: 100vh;
+     background:
+         linear-gradient(to bottom,
+             rgba(255, 255, 255, 0) 46%,
+             rgba(255, 255, 255, 1) 100%),
+         linear-gradient(90deg,
+             rgba(212, 234, 255, 0.808) 0%,
+             rgba(218, 217, 249, 0.829) 45.31%,
+             rgba(225, 204, 243, 0.815) 100%);
+ }
+
+ .header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 24px;
+ }
+
+ .title {
+     color: #555555;
+     font-size: 28px;
+     font-weight: 600;
+     margin: 0;
+     /* background: linear-gradient(45deg, #54a2fc, #fc00ff);
+     background-clip: text;
+     color: transparent; */
+ }
+
+ .quitIcon {
+     padding-block: 8px;
+     padding-inline: 14px;
+
+     margin-right: 10px;
+     cursor: pointer;
+     border-radius: 5px;
+ }
+
+ .quitIcon:hover {
+     background: #ffffff7e;
+ }
+
+ .createButton {
+     background: linear-gradient(135deg, #848Ae3 0%, #5c62b5 100%);
+     border: none;
+     height: 40px;
+     font-weight: 500;
+     padding: 0 20px;
+     border-radius: 8px;
+     box-shadow: 0 4px 12px rgba(132, 138, 227, 0.3);
+     transition: all 0.3s ease;
+ }
+
+ .createButton:hover {
+     transform: translateY(-2px);
+     box-shadow: 0 6px 16px rgba(132, 138, 227, 0.4);
+ }
+
+ .subtitle {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 24px;
+     padding-bottom: 12px;
+     border-bottom: 1px solid #eaeef7;
+ }
+
+
+
+ .subtitle p {
+     color: #666;
+     font-size: 14px;
+     margin: 0;
+ }
+
+ .pptList {
+     display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+     gap: 24px;
+     margin-bottom: 32px;
+ }
+
+ .pptCard {
+     border-radius: 12px;
+     overflow: hidden;
+     box-shadow: 0 0px 12px rgba(0, 0, 0, 0.05);
+     transition: all 0.3s ease;
+     border: 1px solid #eaeef7;
+     cursor: pointer;
+ }
+
+ .pptCard:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 8px 24px rgba(132, 138, 227, 0.2);
+ }
+
+ .cardCover {
+     position: relative;
+     height: 180px;
+     background: linear-gradient(145deg, #9294E9 18%, #6581ED 100%)
+ }
+
+ .coverImage {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 140px;
+ }
+
+ .cardStyle {
+     border: 1px solid transparent;
+     background:
+         linear-gradient(#ffffff, #ffffff) padding-box,
+         linear-gradient(120deg, #08f1d9, #141eaf) border-box;
+
+ }
+
+
+
+ .coverFooter {
+     display: flex;
+     justify-content: space-between;
+     padding: 8px 16px;
+     background: rgba(92, 98, 181, 0.1);
+     color: #5c62b5;
+     font-size: 13px;
+     font-weight: 500;
+ }
+
+ .cardContent {
+     padding: 16px;
+ }
+
+ .pptTitle {
+     color: #333;
+     font-size: 16px;
+     font-weight: 600;
+     margin-bottom: 12px;
+     height: 44px;
+     overflow: hidden;
+     display: -webkit-box;
+ }
+
+ .designInfo {
+     background: #f8f9ff;
+     padding: 8px 12px;
+     border-radius: 6px;
+     margin-bottom: 16px;
+ }
+
+ .designInfo p {
+     margin: 8px 0 0 0;
+     color: #666;
+     font-size: 14px;
+ }
+
+ .cardActions {
+     display: flex;
+     gap: 8px;
+     margin-top: 24px;
+ }
+
+ .cardActions button {
+     flex: 1;
+ }
+
+ .pagination {
+     display: flex;
+     justify-content: center;
+     margin-top: 16px;
+ }
+
+ .modal :global(.ant-modal-header) {
+     border-bottom: 1px solid #eaeef7;
+ }
+
+ .modal :global(.ant-modal-title) {
+     color: #5c62b5;
+     font-weight: 600;
+ }
+
+ .designCard {
+     border-radius: 8px;
+     border: 1px solid #eaeef7;
+     cursor: pointer;
+     transition: all 0.3s ease;
+     position: relative;
+     overflow: hidden;
+ }
+
+ .designCard:hover {
+     border-color: #848Ae3;
+     box-shadow: 0 4px 12px rgba(132, 138, 227, 0.15);
+ }
+
+ .designHeader {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 12px;
+ }
+
+ .designName {
+     color: #333;
+     font-size: 16px;
+     font-weight: 600;
+     margin: 0 0 12px 0;
+ }
+
+ .designMeta {
+     display: flex;
+     justify-content: space-between;
+     color: #666;
+     font-size: 13px;
+ }
+
+ .selected {
+     border: 2px solid #848Ae3;
+     background-color: #f0f2ffcc;
+
+ }
+
+ .selectedIndicator {
+     position: absolute;
+     top: 5px;
+     right: 5px;
+     padding: 4px 8px;
+     font-size: 12px;
+     width: 24px;
+     height: 24px;
+     background: #848Ae3;
+     clip-path: polygon(100% 1px, 0 0, 100% 100%);
+ }
+
+ .selectedDot {
+     width: 8px;
+     height: 8px;
+     background: white;
+     border-radius: 50%;
+ }
+
+ .progressContainer {
+     text-align: center;
+     padding: 40px 0;
+     margin-bottom: 48px;
+     border-bottom: 1px solid #eaeef7;
+ }
+
+ .progressContainer h3 {
+     color: #5c62b5;
+     margin-bottom: 24px;
+ }
+
+ .progressBar {
+     margin-bottom: 24px;
+ }
+
+ .spinner {
+     margin-top: 24px;
+     color: #848Ae3;
+ }

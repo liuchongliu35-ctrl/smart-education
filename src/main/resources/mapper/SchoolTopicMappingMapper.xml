@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bing.tpa.mapper.SchoolTopicMappingMapper">
+
+    <select id="findBySchoolId" resultType="com.bing.tpa.domain.entity.SchoolTopicMapping">
+        SELECT * FROM school_topic_mapping 
+        WHERE school_id = #{schoolId}
+        AND is_used = 1
+    </select>
+
+    <select id="findBySchoolIdAndTemplateId" resultType="com.bing.tpa.domain.entity.SchoolTopicMapping">
+        SELECT * FROM school_topic_mapping 
+        WHERE school_id = #{schoolId}
+        AND template_id = #{templateId}
+    </select>
+
+    <select id="findUsedTemplatesBySchoolId" resultType="com.bing.tpa.domain.entity.SchoolTopicMapping">
+        SELECT * FROM school_topic_mapping 
+        WHERE school_id = #{schoolId}
+        AND is_used = 1
+    </select>
+
+    <select id="findCustomizedTemplatesBySchoolId" resultType="com.bing.tpa.domain.entity.SchoolTopicMapping">
+        SELECT * FROM school_topic_mapping 
+        WHERE school_id = #{schoolId}
+        AND is_customized = 1
+    </select>
+
+    <!-- 根据templateId查询学校知识点映射 -->
+    <select id="findByTemplateId" resultType="com.bing.tpa.domain.entity.SchoolTopicMapping">
+        SELECT * FROM school_topic_mapping
+        WHERE template_id = #{templateId}
+    </select>
+    <select id="findDisabledTemplateRelations" resultType="java.lang.Integer">
+
+    </select>
+    <select id="findBySchoolIdAndTssId" resultType="com.bing.tpa.domain.entity.SchoolTopicMapping">
+        SELECT * FROM school_topic_mapping
+        WHERE school_id = #{schoolId}
+          AND tss_id = #{tssId}
+    </select>
+    <select id="findBySchoolId1" resultType="com.bing.tpa.domain.entity.SchoolTopicMapping">
+        SELECT * FROM school_topic_mapping
+        WHERE school_id = #{schoolId}
+    </select>
+    <!--    <select id="findDisabledTemplateRelations" resultType="java.lang.Integer">-->
+<!--        SELECT template_relation_id-->
+<!--        FROM school_relation_mapping  &#45;&#45; 需要新增此表-->
+<!--        WHERE school_id = #{schoolId}-->
+<!--          AND ts_id = #{tsId}-->
+<!--          AND is_used = 0-->
+<!--    </select>-->
+
+</mapper>
+    

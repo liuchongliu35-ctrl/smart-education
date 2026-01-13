@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bing.tpa.mapper.SchoolMapper">
+
+    <select id="findBySchoolName" resultType="com.bing.tpa.domain.entity.School">
+        SELECT * FROM school 
+        WHERE school_name = #{schoolName}
+    </select>
+
+    <select id="findActiveSchools" resultType="com.bing.tpa.domain.entity.School">
+        SELECT * FROM school 
+        WHERE is_active = 1
+    </select>
+
+</mapper>
+    

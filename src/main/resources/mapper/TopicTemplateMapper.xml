@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bing.tpa.mapper.TopicTemplateMapper">
+
+    <select id="findByTopTitle" resultType="com.bing.tpa.domain.entity.TopicTemplate">
+        SELECT * FROM topic_templates WHERE top_title = #{topTitle}
+        ORDER BY level, template_id
+    </select>
+
+    <select id="findByLevel" resultType="com.bing.tpa.domain.entity.TopicTemplate">
+        SELECT * FROM topic_templates WHERE level = #{level}
+    </select>
+
+    <select id="findTemplateRelations" resultType="com.bing.tpa.domain.entity.TopicTemplateRelation">
+        SELECT * FROM topic_template_relations
+        WHERE parent_template_id = #{parentTemplateId}
+        OR child_template_id = #{childTemplateId}
+    </select>
+
+</mapper>
+    

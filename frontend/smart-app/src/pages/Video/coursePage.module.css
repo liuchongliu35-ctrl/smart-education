@@ -1,0 +1,659 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    min-width: fit-content;
+    background:
+        linear-gradient(to bottom,
+            rgba(255, 255, 255, 0) 46%,
+            rgba(255, 255, 255, 1) 100%),
+        linear-gradient(90deg,
+            rgba(212, 246, 255, 0.808) 0%,
+            rgba(218, 217, 249, 0.829) 45.31%,
+            rgba(225, 204, 243, 0.815) 100%);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    padding: 0 24px;
+    background: #ffffff;
+    box-shadow: 0px 0px 4px #41414133;
+    color: rgb(0, 0, 0);
+    z-index: 10;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.header span {
+    margin-left: 8px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.mainContent {
+    min-width: fit-content;
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    background: transparent;
+}
+
+.sidebar {
+    width: 280px;
+    background-color: #ffffff;
+    border-right: 1px solid #c0c0c0;
+    overflow-y: auto;
+    transition: width 0.2s;
+    padding-inline: 20px;
+    padding-block: 12px;
+}
+
+.sidebar.collapsed {
+    width: 80px;
+}
+
+.content {
+    flex: 1;
+    min-width: 1000px;
+    padding-block: 12px;
+    padding-inline: 48px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.videoContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background: #ffffff1a;
+    min-width: 750px;
+
+}
+
+.videoHeader {
+    width: 100%;
+    height: 50px;
+    text-align: left;
+    color: #383838;
+}
+
+.videoHeader h3 {
+    margin: 0;
+    font-weight: 500;
+}
+
+.videoPlaceholder {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #666;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.videoLoadingBox {
+    width: 800px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.videoDesBox {
+    flex: 1;
+    width: 100%;
+    min-height: 0px;
+    overflow-y: auto;
+    margin-top: 10px;
+    padding-inline: 24px;
+    padding-block: 12px;
+    background: linear-gradient(to right, #F0F0F2 0%, #E6E6E8 100%);
+    border-radius: 5px;
+}
+
+.videoDesBtn {
+    position: relative;
+    background: transparent;
+    border: none;
+    padding: 8px 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.videoDesFocus {
+    position: relative;
+    background: transparent;
+    border: none;
+    padding: 8px 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: siyuan;
+}
+
+.videoDesFocus::after {
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    background: #435fff;
+    border-radius: 2px;
+    content: '';
+}
+
+
+
+.videoMaker {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background: #ffffff;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        position: absolute;
+        z-index: 100;
+        height: 100%;
+    }
+
+    .sidebar.collapsed {
+        width: 0;
+        overflow: hidden;
+    }
+
+    .content {
+        padding: 16px;
+    }
+}
+
+.playerStyle {
+    background: #000;
+    width: 80%;
+    height: 80%;
+}
+
+.videoListHeader {
+    font-family: siyuan;
+    width: 100%;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.videoListContainer {
+    height: 100%;
+    overflow-y: auto;
+    background-color: #fff;
+}
+
+.videoListCard {
+    border-radius: 5px;
+    box-shadow: none;
+    height: max-content;
+}
+
+.videoListItem {
+    padding: 12px 16px;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.videoListItem:hover {
+    background-color: #f9f9f9;
+}
+
+.videoListItem.currentVideo {
+    background-color: #e6f7ff;
+    border-left: 3px solid #1890ff;
+}
+
+.thumbnailContainer {
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 60px;
+    border-radius: 4px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+}
+
+.playIcon {
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    padding: 8px;
+    transition: all 0.3s;
+}
+
+.videoListItem:hover .playIcon {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+}
+
+/* 不同视频的缩略图背景 */
+.thumbnail:nth-child(n) {
+    background-color: #1a2a6c;
+    background-image: linear-gradient(135deg, #1a2a6c, #2a5298);
+}
+
+.thumbnail:nth-child(2n) {
+    background-color: #0f4c81;
+    background-image: linear-gradient(135deg, #0f4c81, #3a7bd5);
+}
+
+.thumbnail.finance3 {
+    background-color: #005792;
+    background-image: linear-gradient(135deg, #005792, #00bbf0);
+}
+
+.thumbnail.finance4 {
+    background-color: #0061a8;
+    background-image: linear-gradient(135deg, #0061a8, #00c2d4);
+}
+
+.thumbnail.finance5 {
+    background-color: #1e3c72;
+    background-image: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+
+.thumbnail.finance6 {
+    background-color: #283e51;
+    background-image: linear-gradient(135deg, #283e51, #4b79a1);
+}
+
+.thumbnail.finance7 {
+    background-color: #134e5e;
+    background-image: linear-gradient(135deg, #134e5e, #71b280);
+}
+
+.thumbnail.finance8 {
+    background-color: #2c3e50;
+    background-image: linear-gradient(135deg, #2c3e50, #3498db);
+}
+
+.thumbnail.finance9 {
+    background-color: #16222a;
+    background-image: linear-gradient(135deg, #16222a, #3a6073);
+}
+
+.videoInfo {
+    flex: 1;
+    min-width: 0;
+}
+
+.videoTitle {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #333;
+}
+
+.videoMeta {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #666;
+}
+
+.duration {
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.ant-tag {
+    font-size: 11px;
+    padding: 0 6px;
+    margin-left: 8px;
+    height: 20px;
+    line-height: 18px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .thumbnail {
+        width: 80px;
+        height: 48px;
+    }
+
+    .videoTitle {
+        font-size: 13px;
+    }
+}
+
+.makeVideoBtnBox {
+    width: 50%;
+    height: 40px;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px #9298e93d;
+    margin-top: 16px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #445FFF;
+    align-items: center;
+    font-family: siyuan;
+    font-size: 14px;
+    transition: 0.3s;
+    border: 1px solid #445FFF;
+}
+
+.makeVideoBtnBox:hover {
+    box-shadow: 0px 4px 12px #494d853d;
+    transform: translateY(-3px);
+    background: linear-gradient(120deg, #54a2fc 0%, #445FFF 100%);
+    color: #fff;
+}
+
+.makingBox {
+    width: 70%;
+    height: 100px;
+    border: 1.6px solid transparent;
+    background:
+        linear-gradient(#ffffff, #ffffff) padding-box,
+        linear-gradient(120deg, #ffcae3, #f042ff, #7226ff) border-box;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.makingText {
+    margin-top: 6px;
+    font-family: siyuan;
+    background: linear-gradient(45deg, #54a2fc, #fc00ff);
+    background-clip: text;
+    color: transparent;
+}
+
+.quitVideoIcon {
+    width: 30px;
+    height: 30px;
+    padding-right: 5px;
+    margin-left: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quitVideoIcon:hover {
+    background: #eaeaea;
+}
+
+.makerContent {
+    width: 100%;
+    height: 500px;
+    background: #ffffff;
+    margin-top: 24px;
+}
+
+
+
+/* ----------配置样式---------- */
+.selectPPTBox {
+    width: 700px;
+    height: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.selectImageBox {
+    width: 900px;
+    height: 500px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pptItemBox {
+    width: 754px;
+    height: 350px;
+    border-radius: 8px;
+    margin-top: 12px;
+}
+
+.designItem:nth-child(3n) {
+    margin-right: 0;
+}
+
+.formSection {
+    margin-bottom: 30px;
+}
+
+
+.divider {
+    height: 1px;
+    background: #f0f0f0;
+    margin: 25px 0;
+}
+
+
+.enhanceGroup {
+    display: flex;
+    gap: 40px;
+}
+
+.enhanceItem {
+    display: flex;
+    flex-direction: column;
+}
+
+.enhanceItem label {
+    margin-bottom: 12px;
+    color: #595959;
+    font-size: 14px;
+}
+
+.smallRadio {
+    width: 80px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+}
+
+.voiceGroup {
+    display: flex;
+    gap: 20px;
+}
+
+.voiceOption {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.uploadHint {
+    color: #8c8c8c;
+    font-size: 14px;
+    margin-top: 4px;
+    text-align: center;
+}
+
+.uploadArea {
+    border: 2px dashed #d9d9d9;
+    border-radius: 8px;
+    padding: 40px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    background: #fafafa;
+}
+
+.uploadArea:hover {
+    border-color: #1890ff;
+    background-color: #e6f7ff;
+}
+
+.uploadIcon {
+    font-size: 48px;
+    color: #1890ff;
+    margin-bottom: 16px;
+}
+
+.uploadText {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #262626;
+}
+
+.uploadPreview {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.previewImage,
+.previewVideo {
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 1px solid #f0f0f0;
+    background: #000;
+}
+
+.fileName {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #595959;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.actionBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    padding: 20px 40px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.stepInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.stepText {
+    font-size: 16px;
+    font-weight: 500;
+    color: #262626;
+}
+
+.stepHint {
+    font-size: 14px;
+    color: #8c8c8c;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 16px;
+}
+
+.actionButton {
+    width: 120px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+
+    .stepsContainer,
+    .stepContent,
+    .actionBar {
+        padding: 0 20px;
+    }
+
+    .stepsContainer {
+        margin-bottom: 30px;
+    }
+
+    .enhanceGroup {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .voiceGroup {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .actionBar {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    .buttonGroup {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
+
+.pptCard {
+    width: 500px;
+    height: 56px;
+    margin: auto;
+    background: #fff;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    padding-inline: 8px;
+    margin-bottom: 8px;
+    margin-top: 32px;
+    box-shadow: 0px 0px 4px #979797;
+}

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteRepositoriesConfiguration">
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="xuggle repo" />
+      <option name="name" value="xuggle repo" />
+      <option name="url" value="http://www.dcm4che.org/maven2/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="http://maven.aliyun.com/nexus/content/repositories/central/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="com.e-iceblue" />
+      <option name="name" value="e-iceblue Repository" />
+      <option name="url" value="https://repo.e-iceblue.com/nexus/content/groups/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Maven Central repository" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="AsposeJavaAPI" />
+      <option name="name" value="Aspose Java API" />
+      <option name="url" value="https://releases.aspose.com/java/repo/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="e-iceblue" />
+      <option name="name" value="E Iceblue Repository" />
+      <option name="url" value="https://repo.e iceblue.com/nexus/content/groups/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="groupdocs-artifact-repository" />
+      <option name="name" value="GroupDocs Artifact Repository" />
+      <option name="url" value="https://repository.groupdocs.cloud/repo" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="com.e-iceblue" />
+      <option name="name" value="com.e-iceblue" />
+      <option name="url" value="http://repo.e-iceblue.cn/repository/maven-public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="com.e-iceblue" />
+      <option name="name" value="e-iceblue" />
+      <option name="url" value="https://repo.e-iceblue.cn/repository/maven-public/" />
+    </remote-repository>
+  </component>
+</project>

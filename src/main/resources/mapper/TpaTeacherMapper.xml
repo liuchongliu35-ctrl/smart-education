@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bing.tpa.mapper.TpaTeacherMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.bing.tpa.domain.entity.TpaTeacher">
+        <id column="uid" property="uid" />
+        <result column="account" property="account" />
+        <result column="password" property="password" />
+        <result column="teach_stage" property="teachStage" />
+        <result column="stage_num" property="stageNum" />
+        <result column="teach_lesson" property="teachLesson" />
+        <result column="phone" property="phone" />
+        <result column="sex" property="sex" />
+        <result column="name" property="name" />
+        <result column="email" property="email" />
+        <result column="ts_id" property="tsId" />
+        <result column="role" property="role"/>
+    </resultMap>
+
+    <update id="addSubjectId" parameterType="int">
+            UPDATE tpa_teacher
+            SET ts_id= #{tsId}
+            WHERE uid= #{uid}
+    </update>
+
+    <select id="findByUsername" resultType="com.bing.tpa.domain.entity.TpaTeacher"> SELECT * FROM tpa_teacher WHERE account = #{username} </select>
+
+<!--    <select id="findBySchoolId" resultType="com.bing.tpa.domain.entity.TpaTeacher"> -->
+<!--    SELECT * FROM tpa_teacher WHERE school_id = #{schoolId} -->
+<!--    </select>-->
+    <select id="findByAccount" resultType="com.bing.tpa.domain.entity.TpaTeacher"
+            parameterType="java.lang.String">
+            SELECT * FROM tpa_teacher WHERE account = #{account}
+    </select>
+
+</mapper>

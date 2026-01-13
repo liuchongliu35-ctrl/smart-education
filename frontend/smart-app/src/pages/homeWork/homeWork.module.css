@@ -1,0 +1,492 @@
+.quitIcon {
+    width: 3vw;
+    transform: scaleX(-1);
+    cursor: pointer;
+    position: absolute;
+    top: 2vh;
+    left: 3%;
+}
+
+
+
+.box {
+    width: 90%;
+    height: max-content;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    color: #000;
+    margin: auto;
+    margin-top: 4vh;
+}
+
+.functionBtn,
+.detalBtn {
+    width: max-content;
+    height: 30px;
+    line-height: 1;
+    font-size: 11px;
+    padding: 6px;
+    background: linear-gradient(120deg, #54a2fc 0%, #445FFF 100%);
+    color: #fff;
+    box-shadow: 0px 1px 2px #435fff9d;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+    letter-spacing: 2px;
+    font-family: siyuan;
+}
+
+.detalBtn {
+    color: #445FFF;
+    background: #fff;
+    border: 1px solid #92a0f3;
+    box-shadow: 0px 1px 2px #00000038;
+}
+
+.detalBtn:hover {
+    box-shadow: 0px 0px 6px #5e5e5ed0;
+}
+
+.functionBtn:hover {
+    box-shadow: 0px 0px 10px #435fffd0;
+}
+
+.btnBox {
+    width: 70%;
+    height: 200px;
+    /* border: 1px solid black; */
+    margin: auto;
+    display: flex;
+    margin-top: 20px;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.entryItem {
+    width: 220px;
+    height: 120px;
+    border-radius: 5px;
+    background: linear-gradient(156.07deg, #F7F8FC 62.06%, #EEF5FF 100%);
+    box-shadow: 0px 0px 4px #0b11312f;
+    padding-block: 20px;
+    padding-inline: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.4s;
+    line-height: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.workTag {
+    background: #D9FDF6;
+    font-size: 12px;
+    padding-inline: 10px;
+    padding-block: 5px;
+    border-radius: 5px;
+    color: #31a787;
+    box-shadow: 0px 0px 3px #31a788c5;
+    margin-left: 10px;
+    font-family: siyuan;
+}
+
+.falseTag {
+    background: #F8DCEE;
+    font-size: 12px;
+    padding-inline: 10px;
+    padding-block: 5px;
+    border-radius: 5px;
+    color: #c44b80;
+    box-shadow: 0px 0px 3px #c44b80c5;
+    margin-left: 10px;
+    font-family: siyuan;
+}
+
+.noTag {
+    background: #eaeaea;
+    font-size: 12px;
+    padding-inline: 10px;
+    padding-block: 5px;
+    border-radius: 5px;
+    color: #112a50;
+    box-shadow: 0px 0px 3px #112a50c5;
+    margin-left: 10px;
+    font-family: siyuan;
+}
+
+
+
+
+.cardHoverStyle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #435fffb8;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 40px;
+    top: 120px;
+    left: 0;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.entryItem:hover .cardHoverStyle {
+    top: 0;
+    overflow: hidden;
+
+}
+
+.workHistoryBox {
+    width: 80%;
+    min-width: 1000px;
+    min-height: 300px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px #0000003b;
+    margin-bottom: 50px;
+    padding-inline: 20px;
+    padding-block: 10px;
+    line-height: 1;
+    background: #F7F8FC;
+}
+
+.workHistoryItem {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    color: #000;
+    background: #fff;
+    margin-bottom: 5px;
+}
+
+.workHistoryItem:hover {
+    box-shadow: 0px 0px 4px #00000038;
+    border-left: 4px solid #435fff;
+}
+
+.workListTop {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.historyCard {
+    background: #eaeaea;
+    width: 450px;
+    height: 550px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.titleBtn {
+    width: 130px;
+    height: 50px;
+    font-size: 16px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleBtn:nth-child(2) {
+    border-right: 2px solid #afafaf;
+    border-left: 2px solid #afafaf;
+}
+
+.list {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.workBox {
+    height: 74px;
+    /* background: #eaeaea; */
+    position: relative;
+    padding-block: 10px;
+    padding-inline: 5px;
+    transition: 0.5s;
+}
+
+.workBox:nth-child(1) {
+    border-top: 3px solid rgb(29, 75, 202);
+}
+
+/* index的css */
+
+.workContent {
+    width: 100%;
+    height: 100vh;
+    /* margin-top: 65px; */
+    display: flex;
+    flex-direction: column;
+    background: #F3F9FE;
+}
+
+.header {
+    width: 100%;
+    height: 60px;
+    /* border: 1px solid black; */
+    background: #fff;
+    box-shadow: 2px 0px 4px #727272a2;
+    display: flex;
+    align-items: center;
+}
+
+.defBtn {
+    width: 100%;
+    height: 50px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+.workName {
+    width: max-content;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.defBtn:hover {
+    background: #eaeaea;
+    border-radius: 5px;
+}
+
+.workName:hover {
+    background: #eaeaea;
+}
+
+.workTypeTag {
+    background: #435fff;
+    padding-inline: 10px;
+    padding-block: 5px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+    box-shadow: 0px 2px 3px #0000005e;
+}
+
+.againBtn {
+    background: #fff;
+    padding-inline: 10px;
+    padding-block: 5px;
+    font-size: 14px;
+    color: #435fff;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #435fff;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.saveBtn {
+    background: #435fff;
+    padding-inline: 10px;
+    padding-block: 5px;
+    font-size: 12px;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+    box-shadow: 0px 2px 3px #0000005e;
+    cursor: pointer;
+}
+
+.workLeft {
+    width: 300px;
+    height: 100%;
+    padding-inline: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-block: 10px;
+}
+
+.workInfo {
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(180deg, #6581ED 20%, #becafa 100%);
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px #25348a79;
+    margin-bottom: 20px;
+    padding: 10px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.glassEffect {
+    background: rgba(255, 255, 255, 0.2);
+    /* 半透明背景 */
+    backdrop-filter: blur(10px);
+    /* 背景模糊 */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* 边框增强质感 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* 阴影提升层次感 */
+    width: 90%;
+    padding-block: 5px;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.exerciseBtnBox {
+    width: 100%;
+    background: #fff;
+    flex: 1;
+    box-shadow: 0px 0px 4px #0000003a;
+    padding-inline: 20px;
+    padding-block: 20px;
+    overflow-y: auto;
+    margin-top: 10px;
+}
+
+.exerciseBtn {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(120deg, #54a2fc60 0%, #4460ff60 100%);
+    backdrop-filter: blur(10px);
+    margin-right: 5%;
+    margin-bottom: 5%;
+    cursor: pointer;
+    transition: 0.4s;
+    font-weight: 600;
+    font-size: 14px;
+    color: #2d46d1;
+    font-family: youshe;
+}
+
+.resourceBtn {
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(120deg, #54a2fc60 0%, #4460ff60 100%);
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    transition: 0.4s;
+    font-size: 14px;
+    font-family: youshe;
+    color: #2d46d1;
+    padding-inline: 10px;
+    padding-block: 5px;
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.workRight {
+    width: 80%;
+    height: 100%;
+    padding-inline: 20px;
+    padding-block: 10px;
+}
+
+.problemContent {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px #0000003a;
+    overflow-y: auto;
+}
+
+
+
+/* ——————以下是学生作业详情CSS—————— */
+.exerciseItemBox {
+    width: 100%;
+    height: max-content;
+    line-height: 1.5;
+    padding-block: 20px;
+    padding-inline: 20px;
+    border-radius: 6px;
+    border: 1px solid rgb(45, 111, 255);
+    margin-bottom: 30px;
+}
+
+.exerciseWrongItemBox {
+    width: 100%;
+    height: max-content;
+    line-height: 1.5;
+    padding-block: 20px;
+    padding-inline: 20px;
+    border-radius: 6px;
+    border: 1px solid #fd5252;
+    margin-bottom: 30px;
+}
+
+.exerciseItemLogo {
+    border-left: 6px solid #435fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.exerciseWrongItemLogo {
+    border-left: 6px solid #fd5252;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.answerBox {
+    width: 100%;
+    height: max-content;
+    font-size: 15px;
+}
+
+
+.reportTag {
+    background: #c3d7fd;
+    font-size: 14px;
+    padding-inline: 5px;
+    padding-block: 3px;
+    border-radius: 5px;
+    color: #435fff;
+    box-shadow: 0px 0px 3px #435fffc5;
+    font-family: youshe;
+    width: max-content;
+
+}
+
+.info {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #6581ED 20%, #becafa 100%);
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px #25348a79;
+    padding: 10px;
+    line-height: 1.5;
+    text-align: center;
+    color: #fff;
+    margin: auto;
+    font-family: siyuan;
+}

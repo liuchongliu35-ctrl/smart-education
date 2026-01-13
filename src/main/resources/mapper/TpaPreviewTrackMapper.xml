@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bing.tpa.mapper.TpaPreviewTrackMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.bing.tpa.domain.entity.TpaPreviewTrack">
+        <id column="pid" property="pid" />
+        <result column="pt_id" property="ptId" />
+        <result column="sid" property="sid" />
+        <result column="text_finish" property="textFinish" />
+        <result column="question_finish" property="questionFinish" />
+        <result column="text_score" property="textScore" />
+        <result column="start_time" property="startTime" />
+        <result column="finish_time" property="finishTime" />
+        <result column="question_score" property="questionScore" />
+        <result column="text_answer" property="textAnswer" />
+        <result column="question_num" property="questionNum" />
+        <result column="supplement" property="supplement" />
+        <result column="add_question" property="addQuestion" />
+        <result column="ai_analysis" property="aiAnalysis" />
+        <result column="stuName" property="stuName" />
+    </resultMap>
+    <update id="updateScore">
+        UPDATE tpa_preview_track
+        SET question_score =#{totalScore}, complete_num= #{completeNum}
+        WHERE pt_id= #{ptId}
+        AND sid= #{uid}
+    </update>
+
+    <select id="findByIds" resultType="com.bing.tpa.domain.entity.TpaPreviewTrack" parameterType="java.util.List">
+        SELECT tpt.*, s.stu_name AS stuName
+        FROM  tpa_preview_track tpt
+        JOIN tpa_student s ON tpt.sid=s.sid
+        WHERE tpt.pt_id IN
+        <foreach collection="list" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </select>
+    <select id="selectOneAndName" resultType="com.bing.tpa.domain.entity.TpaPreviewTrack">
+        select tpt.*,ts.stu_name as stuName
+        from tpa_preview_track tpt,tpa_student ts
+        where tpt.sid= #{uid}
+        and tpt.sid=ts.sid
+        and tpt.pt_id= #{ptId}
+    </select>
+    <select id="selectScore" resultType="java.lang.Integer" parameterType="java.lang.Integer">
+        select sum((text_score * 0.5 + question_score * 0.5))
+        from tpa_preview_track
+        WHERE text_score IS NOT NULL
+        AND question_score IS NOT NULL
+        AND sid= #{sid}
+    </select>
+</mapper>

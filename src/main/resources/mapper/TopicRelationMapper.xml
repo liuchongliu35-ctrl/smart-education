@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bing.tpa.mapper.TopicRelationMapper">
+
+    <select id="findByTsIdAndSchoolId" resultType="com.bing.tpa.domain.entity.TopicRelation">
+        SELECT * FROM topic_relations 
+        WHERE ts_id = #{tsId} 
+        AND school_id = #{schoolId}
+    </select>
+
+    <select id="findByParentId" resultType="com.bing.tpa.domain.entity.TopicRelation">
+        SELECT * FROM topic_relations 
+        WHERE parent_tss_id = #{parentTssId}
+        AND ts_id = #{tsId}
+        AND school_id = #{schoolId}
+    </select>
+
+    <select id="findByChildId" resultType="com.bing.tpa.domain.entity.TopicRelation">
+        SELECT * FROM topic_relations 
+        WHERE child_tss_id = #{childTssId}
+        AND ts_id = #{tsId}
+        AND school_id = #{schoolId}
+    </select>
+
+    <insert id="insertBatch">
+        INSERT INTO topic_relations (parent_tss_id, child_tss_id, relation_type, 
+                                    ts_id, school_id, is_template, template_relation_id)
+        VALUES
+        <foreach collection="list" item="item" separator=",">
+            (#{item.parentTssId}, #{item.childTssId}, #{item.relationType}, 
+             #{item.tsId}, #{item.schoolId}, #{item.isTemplate}, #{item.templateRelationId})
+        </foreach>
+    </insert>
+
+    <!-- 根据tsId查询知识点关系 -->
+    <select id="findByTsId" resultType="com.bing.tpa.domain.entity.TopicRelation">
+        SELECT * FROM topic_relations
+        WHERE ts_id = #{tsId}
+    </select>
+
+    <!-- 根据parentTssId查询子关系 -->
+    <select id="findByParentTssId" resultType="com.bing.tpa.domain.entity.TopicRelation">
+        SELECT * FROM topic_relations
+        WHERE parent_tss_id = #{parentTssId}
+    </select>
+
+    <!-- 根据childTssId查询父关系 -->
+    <select id="findByChildTssId" resultType="com.bing.tpa.domain.entity.TopicRelation">
+        SELECT * FROM topic_relations
+        WHERE child_tss_id = #{childTssId}
+    </select>
+    <select id="findByPointIds" resultType="com.bing.tpa.domain.entity.TopicRelation">
+        SELECT *
+        FROM topic_relations
+        <where>
+            school_id = #{schoolId}
+            <if test="pointIds != null and pointIds.size() > 0">
+                AND (
+                parent_tss_id IN
+                <foreach item="id" collection="pointIds" open="(" separator="," close=")">
+                    #{id}
+                </foreach>
+                OR child_tss_id IN
+                <foreach item="id" collection="pointIds" open="(" separator="," close=")">
+                    #{id}
+                </foreach>
+                )
+            </if>
+            <if test="pointIds == null or pointIds.size() == 0">
+                AND 1 = 0
+            </if>
+        </where>
+    </select>
+    <select id="findByType" resultType="com.bing.tpa.domain.entity.TopicRelation">
+        SELECT
+            *
+        FROM topic_relations
+        WHERE
+            school_id = #{schoolId}
+          AND ts_id = #{tsId}
+          AND relation_type = #{i}
+    </select>
+    <select id="findBySchoolAndTs" resultType="com.bing.tpa.domain.entity.TopicRelation">
+        SELECT * FROM topic_relations
+        WHERE school_id = #{schoolId} AND ts_id = #{tsId}
+    </select>
+
+    <!-- 批量删除关系 -->
+    <delete id="batchDeleteByIds">
+        DELETE FROM topic_relations
+        WHERE relation_id IN
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+    <delete id="deleteByPointIds">
+            DELETE FROM topic_relations
+            WHERE parent_tss_id IN
+            <foreach collection="ids" item="id" open="(" separator="," close=")">
+                #{id}
+            </foreach>
+            OR child_tss_id IN
+            <foreach collection="ids" item="id" open="(" separator="," close=")">
+                #{id}
+            </foreach>
+    </delete>
+
+</mapper>
+    

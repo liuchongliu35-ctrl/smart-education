@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bing.tpa.mapper.TpaHomeworkTrackMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.bing.tpa.domain.entity.TpaHomeworkTrack">
+        <id column="ht_id" property="htId" />
+        <result column="sid" property="sid" />
+        <result column="qid" property="qid" />
+        <result column="status" property="status" />
+        <result column="answer" property="answer" />
+        <result column="score" property="score" />
+        <result column="attempt_time" property="attemptTime" />
+        <result column="completion_time" property="completionTime" />
+        <result column="time_spent" property="timeSpent" />
+        <result column="is_correct" property="isCorrect" />
+        <result column="mistake_case" property="mistakeCase" />
+        <result column="add_explanation" property="addExplanation" />
+        <result column="stuName" property="stuName" />
+        <association property="homeworkDetails" javaType="com.bing.tpa.domain.entity.TpaHomeworkDetails">
+            <id property="qid" column="qid"/>
+            <result property="hid" column="hid"/>
+            <result property="otherHid" column="other_hid"/>
+            <result property="ptId" column="pt_id"/>
+            <result property="sid" column="sid"/>
+            <result property="subject" column="subject"/>
+            <result property="qtitle" column="q_title"/>
+            <result property="qtype" column="q_type"/>
+            <result property="qfrom" column="q_from"/>
+            <result property="qcontent" column="q_content"/>
+            <result property="correctAnswer" column="correct_answer"/>
+            <result property="answerAnalysis" column="answer_analysis"/>
+            <result property="qdefficult" column="q_defficult"/>
+            <result property="defaultScore" column="default_score"/>
+            <result property="usageCount" column="usage_count"/>
+            <result property="avgCorrectRate" column="avg_correct_rate"/>
+            <result property="completeTime" column="complete_time"/>
+            <result property="correctTime" column="correct_time"/>
+            <result property="createTime" column="create_time"/>
+            <result property="updateTime" column="update_time"/>
+            <result property="reviewTime" column="review_time"/>
+            <result property="isDelete" column="is_delete"/>
+            <result property="qhash" column="q_hash"/>
+            <result property="selections" column="selections"/>
+            <result property="selectOption" column="select_option"/>
+        </association>
+    </resultMap>
+
+    <select id="findBath" resultType="com.bing.tpa.domain.entity.TpaHomeworkTrack" parameterType="java.util.List">
+        SELECT
+        tht.* , s.stu_name AS stuName
+        FROM tpa_homework_track tht
+        JOIN tpa_student s ON tht.sid=s.sid
+        WHERE tht.hid IN
+        <foreach collection="homeworkIds" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </select>
+    <select id="selectOneAndQuestion" resultType="com.bing.tpa.domain.entity.TpaHomeworkTrack">
+        SELECT tht.*
+        FROM tpa_homework_track tht
+        WHERE tht.hid = #{hid}
+          AND tht.sid = #{uid}
+    </select>
+
+
+</mapper>

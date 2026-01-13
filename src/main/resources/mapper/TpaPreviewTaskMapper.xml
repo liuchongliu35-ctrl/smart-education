@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bing.tpa.mapper.TpaPreviewTaskMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.bing.tpa.domain.entity.TpaPreviewTask">
+        <id column="pt_id" property="ptId" />
+        <result column="cid" property="cid" />
+        <result column="author_id" property="authorId" />
+        <result column="preview_name" property="previewName" />
+        <result column="p_title" property="ptitle" />
+        <result column="secondary_title" property="secondaryTitle" />
+        <result column="p_explanation" property="pexplanation" />
+        <result column="preview_content" property="previewContent" />
+        <result column="complete" property="complete" />
+        <result column="is_open" property="isOpen" />
+        <result column="create_time" property="createTime" />
+        <result column="deadline" property="deadline" />
+        <result column="active" property="active" />
+        <result column="problem" property="problem" />
+        <result column="feedback" property="feedback" />
+        <result column="by_time" property="byTime" />
+        <result column="questions_num" property="questionsNum" />
+        <result column="questions_grade" property="questionsGrade" />
+    </resultMap>
+<!--    预习任务完成人数加 1-->
+    <update id="updateCompleteNum">
+        UPDATE tpa_preview_task
+        SET complete= complete + 1
+        WHERE pt_id= #{ptId}
+    </update>
+    <select id="selectSubjectByPtId" resultType="java.lang.String" parameterType="java.lang.Integer">
+        SELECT tt.teach_lesson
+        FROM tpa_preview_task tpt
+        LEFT JOIN tpa_teacher tt ON tpt.author_id = tt.uid
+        WHERE tpt.pt_id = #{ptId}
+    </select>
+    <select id="getTaskByTitleAndTid" resultType="com.bing.tpa.domain.entity.TpaPreviewTask">
+        SELECT *
+        FROM tpa_preview_task
+        WHERE author_id= #{tid}
+        AND (
+            (p_title= #{title})
+            OR(secondary_title= #{title})
+            )
+        ORDER BY create_time
+    </select>
+
+
+</mapper>

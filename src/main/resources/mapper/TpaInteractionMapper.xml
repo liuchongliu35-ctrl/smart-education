@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bing.tpa.mapper.TpaInteractionMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.bing.tpa.domain.entity.TpaInteraction">
+        <id column="hd_id" property="hdId" />
+        <result column="td_id" property="tdId" />
+        <result column="method" property="method" />
+        <result column="answer" property="answer" />
+        <result column="replay" property="replay" />
+        <result column="viewpoint_num" property="viewpointNum" />
+        <result column="participates" property="participates" />
+        <result column="correct" property="correct" />
+        <result column="ask_content" property="askContent" />
+        <result column="deadline" property="deadline" />
+        <result column="is_active" property="isActive" />
+        <result column="content" property="content"/>
+    </resultMap>
+
+    <select id="selectByDesignIds" resultType="com.bing.tpa.domain.entity.TpaInteraction" parameterType="java.util.List">
+        SELECT *
+        FROM tpa_interaction
+        WHERE td_id IN
+    <foreach collection="designIds" item="id" open="(" separator="," close=")">
+        #{id}
+    </foreach>
+    </select>
+</mapper>

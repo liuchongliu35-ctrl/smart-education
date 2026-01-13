@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bing.tpa.mapper.TpaClassMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.bing.tpa.domain.entity.TpaClass">
+        <id column="cid" property="cid" />
+        <result column="tid" property="tid" />
+        <result column="person" property="person" />
+        <result column="c_name" property="cName" />
+        <result column="c_subject" property="cSubject" />
+    </resultMap>
+<!--    更改班级的人数-->
+    <update id="updatePersonNUm" parameterType="int">
+        UPDATE tpa_class
+        SET person=person+ #{num}
+        WHERE cid= #{cid}
+    </update>
+<!--    获取班级的人数-->
+    <select id="getClassPersonNum" resultType="java.lang.Integer">
+        SELECT person
+        FROM tpa_class
+        <where>
+            <if test="cid != null">
+                cid = #{cid}
+            </if>
+            <if test="tid != null">
+                OR tid = #{tid}
+            </if>
+        </where>
+    </select>
+
+</mapper>

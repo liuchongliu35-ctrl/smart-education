@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bing.tpa.mapper.TeachingPlanMapper">
+
+    <select id="findByTsId" resultType="com.bing.tpa.domain.entity.TeachingPlan">
+        SELECT * FROM teaching_plans 
+        WHERE ts_id = #{tsId}
+    </select>
+
+    <select id="findByTsIdAndSchoolId" resultType="com.bing.tpa.domain.entity.TeachingPlan">
+        SELECT * FROM teaching_plans 
+        WHERE ts_id = #{tsId}
+        AND school_id = #{schoolId}
+    </select>
+
+    <select id="findByTsIdOrderByPlanOrder" resultType="com.bing.tpa.domain.entity.TeachingPlan">
+        SELECT * FROM teaching_plans 
+        WHERE ts_id = #{tsId}
+        ORDER BY plan_order
+    </select>
+
+    <insert id="insertBatch">
+        INSERT INTO teaching_plans (ts_id, school_id, tss_id, plan_order)
+        VALUES
+        <foreach collection="list" item="item" separator=",">
+            (#{item.tsId}, #{item.schoolId}, #{item.tssId}, #{item.planOrder})
+        </foreach>
+    </insert>
+
+</mapper>
+    

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bing.tpa.mapper.StudentClassMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.bing.tpa.domain.entity.StudentClass">
+        <id column="sc_id" property="scId" />
+        <result column="sid" property="sid" />
+        <result column="cid" property="cid" />
+        <result column="is_exit" property="isExit" />
+        <result column="ranking" property="ranking" />
+        <result column="evaluation" property="evaluation" />
+    </resultMap>
+    <select id="getStudent" resultType="com.bing.tpa.domain.entity.StudentClass">
+        select sc.*,ts.stu_name as stuName
+        from student_class sc,tpa_student ts
+        where sc.cid= #{cid}
+        and sc.sid=ts.sid
+        and sc.is_exit=1
+    </select>
+    <select id="getList" resultType="com.bing.tpa.domain.VO.StudentListVo">
+        SELECT s.*,sc.ranking,sc.evaluation
+        FROM student_class sc,tpa_student s
+        WHERE sc.cid= #{cid}
+        AND sc.sid=s.sid
+    </select>
+
+
+</mapper>

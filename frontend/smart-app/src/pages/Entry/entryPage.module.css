@@ -1,0 +1,57 @@
+.header{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding-inline: 30px;
+}
+
+.loginBtn,.registerBtn{
+    width: max-content;
+    line-height: 1;
+    font-size: 14px;
+    padding-inline:25px;
+    padding-block: 10px;
+    background: linear-gradient(120deg, #54a2fc 0%, #445FFF 100%);
+    color: #fff;
+    box-shadow: 0px 1px 2px #435fff9d;
+    border: none;
+    display: flex;
+    align-items: center;
+    border-radius:5px;
+    cursor: pointer;
+    transition: 0.5s;
+    letter-spacing: 2px;
+    font-family: siyuan;
+}
+
+.registerBtn{
+    background:none;
+    color: #6078ff;
+    box-shadow: none;
+    border: 1px solid #435fff;
+    margin-right: 30px;
+}
+
+.loginButton{
+    width: max-content;
+    line-height: 1;
+    font-size: 20px;
+    padding-right:25px;
+    padding-left: 10px;
+    padding-block: 10px;
+    background: linear-gradient(120deg, #54a2fc 0%, #445FFF 100%);
+    color: #fff;
+    box-shadow: 0px 1px 2px #435fff9d;
+    border: none;
+    display: flex;
+    align-items: center;
+    border-radius:5px;
+    cursor: pointer;
+    transition: 0.5s;
+    letter-spacing: 2px;
+    font-family: siyuan;
+    margin-top: 100px;
+}

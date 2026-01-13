@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bing.tpa.mapper.TpaHomeworkDetailsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.bing.tpa.domain.entity.TpaHomeworkDetails">
+        <id column="qid" property="qid" />
+        <result column="hid" property="hid" />
+        <result column="pt_id" property="ptId" />
+        <result column="sid" property="sid" />
+        <result column="q_title" property="qtitle" />
+        <result column="q_type" property="qtype" />
+        <result column="q_from" property="qfrom" />
+        <result column="q_content" property="qcontent" />
+        <result column="correct_answer" property="correctAnswer" />
+        <result column="answer_analysis" property="answerAnalysis" />
+        <result column="q_defficult" property="qdefficult" />
+        <result column="default_score" property="defaultScore" />
+        <result column="usage_count" property="usageCount" />
+        <result column="avg_correct_rate" property="avgCorrectRate" />
+        <result column="complete_time" property="completeTime" />
+        <result column="correct_time" property="correctTime" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="review_time" property="reviewTime" />
+        <result column="is_delete" property="isDelete" />
+        <result column="q_hash" property="qhash" />
+        <result column="selections" property="selections" />
+        <result column="stuName" property="stuName" />
+    </resultMap>
+
+    <select id="findQuestionBath" resultType="com.bing.tpa.domain.entity.TpaHomeworkDetails" parameterType="java.util.List">
+        SELECT *
+        FROM tpa_homework_details WHERE hid IN
+        <foreach collection="hids" item="hids" open="(" separator="," close=")">
+        #{hids}
+        </foreach>
+    </select>
+
+    <select id="selectPreviewQuestions" resultType="com.bing.tpa.domain.entity.TpaHomeworkDetails" parameterType="java.util.List">
+        SELECT *
+        FROM tpa_homework_details
+        WHERE pt_id IN
+        <foreach collection="taskIds" item="taskIds" open="(" separator="," close=")">
+         #{taskIds}
+        </foreach>
+    </select>
+
+    <select id="selectPreviewQuestionsAnswer" resultType="com.bing.tpa.domain.entity.TpaHomeworkTrack" parameterType="java.util.List">
+        SELECT
+        tht.* ,s.stu_name AS stuName
+        FROM
+        tpa_homework_track tht
+        JOIN tpa_student s ON tht.sid=s.sid
+        WHERE
+        --  根据pt_id这个预习任务的id来查找题目表中属于该预习任务的预习题完成记录，包括预习题和个性化推荐的补充题
+        tht.pt_id IN
+        <foreach collection="ptId" item="ptId" open="(" separator="," close=")">
+        #{ptId}
+        </foreach>
+    </select>
+
+    <select id="selectByKeyword" resultType="com.bing.tpa.domain.entity.TpaHomeworkDetails">
+        SELECT thd.*
+        FROM tpa_homework_details thd,tpa_homework th
+        WHERE thd.hid=th.hid
+          AND th.is_open=1
+          AND (thd.q_title LIKE CONCAT('%', #{keyword}, '%')
+            OR thd.q_type LIKE CONCAT('%', #{keyword}, '%')
+            OR thd.subject LIKE CONCAT('%', #{keyword}, '%'))
+        ORDER BY thd.usage_count DESC
+    </select>
+<!--  OR thd.q_type LIKE CONCAT('%', #{keyword}, '%')
+                    OR thd.subject LIKE CONCAT('%', #{keyword}, '%')-->
+    <select id="selectQuestionBySubject" resultType="com.bing.tpa.domain.entity.TpaHomeworkDetails"  parameterType="string">
+        SELECT thd.*
+        FROM tpa_homework_details thd,tpa_homework th,tpa_teacher tt
+        WHERE thd.hid=th.hid
+        AND th.author_id=tt.uid
+        AND th.is_open=1
+        AND tt.teach_stage= #{stage}
+        AND thd.subject LIKE CONCAT('%', #{subject}, '%') OR thd.q_title LIKE CONCAT('%', #{subject}, '%')
+        ORDER BY thd.usage_count DESC
+    </select>
+    <select id="getQuestionBySubject" resultType="com.bing.tpa.domain.entity.TpaHomeworkDetails"
+            parameterType="string">
+        SELECT thd.*
+        FROM tpa_homework_details thd,tpa_preview_task tpt,tpa_teacher tt
+        WHERE thd.pt_id=tpt.pt_id
+        AND tpt.author_id=tt.uid
+        AND tpt.is_open=1
+        AND tt.teach_stage= #{stage}
+        AND thd.subject LIKE CONCAT('%', #{subject}, '%') OR thd.q_title LIKE CONCAT('%', #{subject}, '%')
+        ORDER BY thd.usage_count DESC
+    </select>
+<!--    根据一个预习任务id获取该预习任务的所有预习题-->
+    <select id="getQuestionByPtId" resultType="com.bing.tpa.domain.entity.TpaHomeworkDetails">
+        SELECT *
+        FROM tpa_homework_details
+        WHERE pt_id= #{ptId}
+        AND sid IS NULL
+    </select>
+    <!--    根据一个预习任务id获取该作业的所有题目-->
+    <select id="getQuestionByHId" resultType="com.bing.tpa.domain.entity.TpaHomeworkDetails">
+        SELECT *
+        FROM tpa_homework_details
+        WHERE hid= #{hid}
+--           匹配其他作业里面被该作业引用的题目
+        OR other_hid LIKE CONCAT('%"', #{hid}, '"%');
+    </select>
+    <select id="selectPtQuestion" resultType="com.bing.tpa.domain.entity.TpaHomeworkDetails"
+            parameterType="java.lang.Integer">
+        select *
+        from tpa_homework_details
+        where pt_id= #{ptId}
+        and sid IS NULL ;
+    </select>
+    <select id="selectSpecial" resultType="com.bing.tpa.domain.entity.TpaHomeworkDetails">
+        select *
+        from tpa_homework_details
+        where pt_id= #{ptId}
+        and sid= #{uid}
+    </select>
+
+    <update id="updateReviewTimeInteger">
+    UPDATE tpa_homework_details
+    SET  review_time= #{time}
+    WHERE hid= #{hid}
+    </update>
+
+    <!-- 查询作业详情列表 -->
+    <select id="selectQuestions" resultType="com.bing.tpa.domain.entity.TpaHomeworkDetails">
+        SELECT * FROM tpa_homework_details
+        WHERE is_delete = 1
+        <if test="hid != null">
+            AND hid = #{hid}
+        </if>
+        <if test="ptId != null">
+            AND pt_id = #{ptId}
+        </if>
+        ORDER BY qid
+    </select>
+
+</mapper>

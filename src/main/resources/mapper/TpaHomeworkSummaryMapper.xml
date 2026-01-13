@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bing.tpa.mapper.TpaHomeworkSummaryMapper">
+
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.bing.tpa.domain.entity.TpaHomeworkSummary">
+        <id column="tht_id" property="thtId" />
+        <result column="hid" property="hid" />
+        <result column="name" property="name" />
+        <result column="complete_time" property="completeTime" />
+        <result column="score" property="score" />
+        <result column="complete_question" property="completeQuestion" />
+        <result column="question_num" property="questionNum" />
+        <result column="mistake" property="mistake" />
+        <result column="is_complete" property="isComplete" />
+    </resultMap>
+    <update id="updateScore">
+        UPDATE tpa_homework_summary
+        SET  score= #{totalScore}
+        WHERE hid= #{hid}
+        AND uid= #{uid}
+    </update>
+    <select id="totalScore" resultType="java.lang.Integer" parameterType="java.lang.Integer">
+        select sum(score)
+        from tpa_homework_summary
+        WHERE score is not null
+        AND uid= #{sid}
+    </select>
+
+</mapper>

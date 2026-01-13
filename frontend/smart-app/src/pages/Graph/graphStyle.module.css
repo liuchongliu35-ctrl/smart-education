@@ -1,0 +1,360 @@
+.drawerBox {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background:
+        linear-gradient(to bottom,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1) 60%),
+        linear-gradient(90deg,
+            rgba(212, 246, 255, 0.65) 0%,
+            rgba(218, 217, 249, 0.65) 45.31%,
+            rgba(225, 204, 243, 0.65) 100%);
+    padding-top: 20px;
+}
+
+.quitIcon {
+    padding-block: 8px;
+    padding-inline: 14px;
+    margin-left: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.quitIcon:hover {
+    background: #eaeaea;
+}
+
+.contentBox {
+    width: 100%;
+    min-height: 400px;
+    background: #fff;
+    padding-inline: 20px;
+    border-radius: 10px;
+}
+
+.graphBtnBox {
+    width: 100%;
+    height: 34px;
+    margin-top: 16px;
+    display: flex;
+    padding-left: 30px;
+}
+
+.drawerBtn {
+    width: max-content;
+    padding-inline: 10px;
+    height: 34px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    background: linear-gradient(to right, #F0F0F2 0%, #E6E6E8 100%);
+    font-family: siyuan;
+    line-height: 36px;
+    color: #666666;
+    font-size: 13px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+    border: 1px solid #fff;
+}
+
+.drawerBtn:hover {
+    background: rgba(204, 204, 204, 0.39);
+}
+
+.graphHeader {
+    height: 50px;
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    top: 0px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 2px 6px #66666621;
+    justify-content: center;
+}
+
+.titleTextBox {
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(45deg, #009fde, #8400ff);
+    background-clip: text;
+    color: transparent;
+
+}
+
+.graphSider {
+    width: 170px;
+    background: #fff;
+    border-radius: 10px;
+    position: fixed;
+    top: 120px;
+    left: 40px;
+    z-index: 50;
+    box-shadow: 0px 0px 10px #acafbd6c;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.graphDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 12px;
+}
+
+.graphMenuBtn {
+    margin-top: 12px;
+    padding: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.graphMenuBtn:hover {
+    background: #eaeaea;
+    border-radius: 5px;
+}
+
+.cardStyle {
+    margin-top: 10px;
+}
+
+.cardStyle:nth-child(1) {
+    margin-top: 0;
+}
+
+.pptBar {
+    width: 100%;
+    padding-inline: 24px;
+    padding-block: 15px;
+    background: #F6F7FB;
+    cursor: pointer;
+    color: #666666;
+}
+
+.pptCard {
+    width: 100%;
+    height: 56px;
+    background: #fff;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    padding-inline: 8px;
+    margin-bottom: 8px;
+}
+
+.pptCardBtn {
+    padding-inline: 6px;
+    padding-block: 3px;
+    color: #0034de;
+    border-radius: 3px;
+    transition: 0.3s;
+    margin-left: 10px;
+}
+
+.pptCardBtn:hover {
+    background: #66666662;
+}
+
+.addKnowledge {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 6px #585a7256;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    z-index: 50;
+    transition: 0.5s;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.catalogueBox {
+    position: fixed;
+    top: 50px;
+    height: calc(100vh - 50px);
+    width: 250px;
+    background: #ffffff;
+    z-index: 99;
+    padding-block: 16px;
+    padding-inline: 12px;
+    overflow-y: auto;
+}
+
+.catalogueBoxHeader {
+    font-family: siyuan;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.closeBtn {
+    color: #666;
+    font-size: 16px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.closeBtn:hover {
+    background: #8f8f8f52;
+    border-radius: 5px;
+}
+
+.catalogueContent {
+    padding: 3px;
+}
+
+.workHistoryItem {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    color: #000;
+    background: #fff;
+    margin-bottom: 5px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.24);
+}
+
+.workHistoryItem:hover {
+    box-shadow: 0px 0px 4px #00000038;
+    border-left: 4px solid #435fff;
+}
+
+.detalBtn {
+    width: max-content;
+    height: 30px;
+    line-height: 1;
+    font-size: 11px;
+    padding: 6px;
+    color: #435fff;
+    border: 1px solid #435fff;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+    letter-spacing: 2px;
+    font-family: siyuan;
+}
+
+.detalBtn:hover {
+    box-shadow: 0px 0px 6px #5e5e5ed0;
+}
+
+.workTag {
+    background: #D9FDF6;
+    font-size: 12px;
+    padding-inline: 10px;
+    padding-block: 5px;
+    border-radius: 5px;
+    color: #31a787;
+    box-shadow: 0px 0px 3px #31a788c5;
+    margin-left: 10px;
+    font-family: siyuan;
+}
+
+.falseTag {
+    background: #F8DCEE;
+    font-size: 12px;
+    padding-inline: 10px;
+    padding-block: 5px;
+    border-radius: 5px;
+    color: #c44b80;
+    box-shadow: 0px 0px 3px #c44b80c5;
+    margin-left: 10px;
+    font-family: siyuan;
+}
+
+.noTag {
+    background: #eaeaea;
+    font-size: 12px;
+    padding-inline: 10px;
+    padding-block: 5px;
+    border-radius: 5px;
+    color: #112a50;
+    box-shadow: 0px 0px 3px #112a50c5;
+    margin-left: 10px;
+    font-family: siyuan;
+}
+
+.thumbnailContainer {
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 60px;
+    border-radius: 4px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+}
+
+.playIcon {
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    padding: 8px;
+    transition: all 0.3s;
+}
+
+.videoListItem:hover .playIcon {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+}
+
+.videoInfo {
+    flex: 1;
+    min-width: 0;
+}
+
+.videoTitle {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #333;
+}
+
+.videoMeta {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #666;
+}
+
+.duration {
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,342 @@
+[
+  {
+    "parentId": 1057,
+    "parentTitle": "第七讲人工智能前沿技术",
+    "parentSecondTitle": null,
+    "level": 2,
+    "children": [
+      {
+        "childId": 1059,
+        "childTitle": "强化学习基础",
+        "childSecondTitle": "第七讲",
+        "level": 3
+      },
+      {
+        "childId": 1061,
+        "childTitle": "联邦学习技术",
+        "childSecondTitle": "第七讲",
+        "level": 3
+      },
+      {
+        "childId": 1063,
+        "childTitle": "量子机器学习导论",
+        "childSecondTitle": "第七讲",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "parentId": 1060,
+    "parentTitle": "第一讲认识人工智能",
+    "parentSecondTitle": null,
+    "level": 2,
+    "children": [
+      {
+        "childId": 1068,
+        "childTitle": "人工智能的定义与技术分类（修正）",
+        "childSecondTitle": "第一讲",
+        "level": 3
+      },
+      {
+        "childId": 1069,
+        "childTitle": "人工智能发展简史",
+        "childSecondTitle": "第一讲",
+        "level": 3
+      },
+      {
+        "childId": 1070,
+        "childTitle": "人工智能主要流派",
+        "childSecondTitle": "第一讲",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "parentId": 1062,
+    "parentTitle": "第二讲人工智能基础理论",
+    "parentSecondTitle": null,
+    "level": 2,
+    "children": [
+      {
+        "childId": 1072,
+        "childTitle": "搜索技术",
+        "childSecondTitle": "第二讲",
+        "level": 3
+      },
+      {
+        "childId": 1073,
+        "childTitle": "群智能算法",
+        "childSecondTitle": "第二讲",
+        "level": 3
+      },
+      {
+        "childId": 1071,
+        "childTitle": "知识表示方法",
+        "childSecondTitle": "第二讲",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "parentId": 1064,
+    "parentTitle": "第三讲人工智能与计算思维",
+    "parentSecondTitle": null,
+    "level": 2,
+    "children": [
+      {
+        "childId": 1074,
+        "childTitle": "人工智能的数学本质",
+        "childSecondTitle": "第三讲",
+        "level": 3
+      },
+      {
+        "childId": 1075,
+        "childTitle": "人工智能中的简化数学",
+        "childSecondTitle": "第三讲",
+        "level": 3
+      },
+      {
+        "childId": 1076,
+        "childTitle": "计算思维方法基础",
+        "childSecondTitle": "第三讲",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "parentId": 1065,
+    "parentTitle": "第四讲深度学习与大数据",
+    "parentSecondTitle": null,
+    "level": 2,
+    "children": [
+      {
+        "childId": 1077,
+        "childTitle": "神经网络基础",
+        "childSecondTitle": "第四讲",
+        "level": 3
+      },
+      {
+        "childId": 1078,
+        "childTitle": "典型深度神经网络",
+        "childSecondTitle": "第四讲",
+        "level": 3
+      },
+      {
+        "childId": 1079,
+        "childTitle": "大模型原理",
+        "childSecondTitle": "第四讲",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "parentId": 1066,
+    "parentTitle": "第五讲人工智能的经典及前沿应用",
+    "parentSecondTitle": null,
+    "level": 2,
+    "children": [
+      {
+        "childId": 1088,
+        "childTitle": "AI在医疗影像诊断的应用",
+        "childSecondTitle": "第五讲",
+        "level": 3
+      },
+      {
+        "childId": 1080,
+        "childTitle": "专家系统应用",
+        "childSecondTitle": "第五讲",
+        "level": 3
+      },
+      {
+        "childId": 1081,
+        "childTitle": "计算机视觉技术",
+        "childSecondTitle": "第五讲",
+        "level": 3
+      },
+      {
+        "childId": 1082,
+        "childTitle": "自然语言系统",
+        "childSecondTitle": "第五讲",
+        "level": 3
+      },
+      {
+        "childId": 1083,
+        "childTitle": "生成式AI",
+        "childSecondTitle": "第五讲",
+        "level": 3
+      },
+      {
+        "childId": 1084,
+        "childTitle": "具身智能",
+        "childSecondTitle": "第五讲",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "parentId": 1067,
+    "parentTitle": "第六讲人工智能安全与伦理",
+    "parentSecondTitle": null,
+    "level": 2,
+    "children": [
+      {
+        "childId": 1085,
+        "childTitle": "人工智能伦理",
+        "childSecondTitle": "第六讲",
+        "level": 3
+      },
+      {
+        "childId": 1086,
+        "childTitle": "技术风险",
+        "childSecondTitle": "第六讲",
+        "level": 3
+      },
+      {
+        "childId": 1087,
+        "childTitle": "法律与治理",
+        "childSecondTitle": "第六讲",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "parentId": 1071,
+    "parentTitle": "知识表示方法",
+    "parentSecondTitle": "第二讲",
+    "level": 3,
+    "children": [
+      {
+        "childId": 1080,
+        "childTitle": "专家系统应用",
+        "childSecondTitle": "第五讲",
+        "level": 4
+      }
+    ]
+  },
+  {
+    "parentId": 1072,
+    "parentTitle": "搜索技术",
+    "parentSecondTitle": "第二讲",
+    "level": 3,
+    "children": [
+      {
+        "childId": 1076,
+        "childTitle": "计算思维方法基础",
+        "childSecondTitle": "第三讲",
+        "level": 4
+      }
+    ]
+  },
+  {
+    "parentId": 1073,
+    "parentTitle": "群智能算法",
+    "parentSecondTitle": "第二讲",
+    "level": 3,
+    "children": [
+      {
+        "childId": 1084,
+        "childTitle": "具身智能",
+        "childSecondTitle": "第五讲",
+        "level": 4
+      }
+    ]
+  },
+  {
+    "parentId": 1074,
+    "parentTitle": "人工智能的数学本质",
+    "parentSecondTitle": "第三讲",
+    "level": 3,
+    "children": [
+      {
+        "childId": 1077,
+        "childTitle": "神经网络基础",
+        "childSecondTitle": "第四讲",
+        "level": 4
+      }
+    ]
+  },
+  {
+    "parentId": 1077,
+    "parentTitle": "神经网络基础",
+    "parentSecondTitle": "第四讲",
+    "level": 3,
+    "children": [
+      {
+        "childId": 1081,
+        "childTitle": "计算机视觉技术",
+        "childSecondTitle": "第五讲",
+        "level": 4
+      }
+    ]
+  },
+  {
+    "parentId": 1078,
+    "parentTitle": "典型深度神经网络",
+    "parentSecondTitle": "第四讲",
+    "level": 3,
+    "children": [
+      {
+        "childId": 1082,
+        "childTitle": "自然语言系统",
+        "childSecondTitle": "第五讲",
+        "level": 4
+      }
+    ]
+  },
+  {
+    "parentId": 1079,
+    "parentTitle": "大模型原理",
+    "parentSecondTitle": "第四讲",
+    "level": 3,
+    "children": [
+      {
+        "childId": 1083,
+        "childTitle": "生成式AI",
+        "childSecondTitle": "第五讲",
+        "level": 4
+      }
+    ]
+  },
+  {
+    "parentId": 1081,
+    "parentTitle": "计算机视觉技术",
+    "parentSecondTitle": "第五讲",
+    "level": 3,
+    "children": [
+      {
+        "childId": 1087,
+        "childTitle": "法律与治理",
+        "childSecondTitle": "第六讲",
+        "level": 4
+      }
+    ]
+  },
+  {
+    "parentId": 1083,
+    "parentTitle": "生成式AI",
+    "parentSecondTitle": "第五讲",
+    "level": 3,
+    "children": [
+      {
+        "childId": 1085,
+        "childTitle": "人工智能伦理",
+        "childSecondTitle": "第六讲",
+        "level": 4
+      }
+    ]
+  },
+  {
+    "parentId": 1084,
+    "parentTitle": "具身智能",
+    "parentSecondTitle": "第五讲",
+    "level": 3,
+    "children": [
+      {
+        "childId": 1086,
+        "childTitle": "技术风险",
+        "childSecondTitle": "第六讲",
+        "level": 4
+      }
+    ]
+  }
+]
