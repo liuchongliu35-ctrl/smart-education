@@ -10,6 +10,7 @@
     <a href="#-技术架构-architecture">技术架构</a> •
     <a href="#-系统演示-demo">系统演示</a> •
     <a href="#-快速开始-quick-start">快速开始</a>
+    系统演示视频链接：https://www.bilibili.com/video/BV1MB8d6SE37/
   </p>
   
   <p>
